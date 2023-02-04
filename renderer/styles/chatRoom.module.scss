@@ -1,0 +1,87 @@
+.chat_content {
+  overflow-y: auto;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.chat_content::-webkit-scrollbar {
+  width: 10px;
+}
+.chat_content::-webkit-scrollbar-thumb {
+  background-color: #e8e2e2;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.chat_content::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+.message_box_wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.m_box_wrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+.m_box {
+  min-height: 40px;
+  background: #d8d8d8;
+  margin: 10px;
+  border-radius: 13px;
+  padding: 10px 13px;
+  word-break: break-all;
+  white-space: pre-line;
+  text-align: left;
+  max-width: 600px;
+  display: inline-block;
+}
+
+.msg_box_time {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.left_box {
+  margin-left: auto;
+}
+
+.time_box_wrap {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ta_r {
+  text-align: right;
+}
+
+.ta_l {
+  text-align: left;
+}
+
+.orner_color {
+  background-color: #87d068;
+}
+.login_user_box {
+  background: #fffbac;
+}

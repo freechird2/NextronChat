@@ -1,0 +1,98 @@
+{
+  "private": true,
+  "name": "my-nextron-app",
+  "description": "My application description",
+  "version": "1.0.0",
+  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron",
+    "build": "nextron build",
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "build:osx": "build --mac",
+    "build:linux": "npm run build:linux32 && npm run build:linux64",
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@types/uuid": "^9.0.0",
+    "antd": "^5.1.7",
+    "babel-loader": "^9.1.2",
+    "electron-serve": "^1.1.0",
+    "electron-store": "^8.1.0",
+    "firebase": "^9.16.0",
+    "moment": "^2.29.4",
+    "recoil": "^0.7.6",
+    "sass": "^1.57.1",
+    "uuid": "^9.0.0",
+    "dropbox": "^2.5.12",
+    "electron-is-dev": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "electron": "^21.3.3",
+    "electron-builder": "^23.6.0",
+    "next": "^12.3.4",
+    "nextron": "^8.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4",
+    "electron-is-dev": "latest"
+  },
+  "build": {
+    "productName": "NextronChat",
+    "appId": "com.electron.NextronChat",
+    "asar": true,
+    "protocols": {
+      "name": "NextronChat",
+      "schemes": [
+        "NextronChat"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/installer/Icon.icns"
+    },
+    "dmg": {
+      "title": "HelloElectron",
+      "icon": "./resources/installer/Icon.icns"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/installer/Icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./resources/linuxicon"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources/installer/",
+      "output": "dist/",
+      "app": "."
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.content_title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 30px;
+  padding: 0 15px;
+}
+
+.content_start {
+  text-align: center;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  display: flex;
+}
+
+.content_middle {
+  line-height: 30px;
+  width: 200px;
+  margin: auto;
+  font-size: 20px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom_btn {
+  width: 140px;
+  height: 160px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn_1 {
+  background: rgb(6, 14, 131);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 14, 131, 1) 0%,
+    rgba(12, 25, 180, 1) 100%
+  );
+  border: none;
+}
+.btn_1:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+}
+
+.content_button_wrap {
+  margin-top: 15px;
+  font-size: 32px;
+}
+
+.content_button {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
