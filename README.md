@@ -1,2 +1,2 @@
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
+# Nextron으로 만든 실시간 채팅 앱입니다.
+yarn dev로 
